@@ -35,6 +35,7 @@ button {
 }
 .wrapper {
   width: 100%;
+  position: relative;
 }
 .wrapper__container {
   width: 100%;
@@ -431,7 +432,7 @@ button {
         grid-template-rows: 1fr;
         grid-template-areas: ". model-description";
         align-items: center;
-        gap: 0px 0px;
+        gap: 0px 40px;
         .slide__description {
           grid-area: model-description;
           font-family: "Poppins", sans-serif;
@@ -510,6 +511,8 @@ button {
                 width: 180px;
                 height: 50px;
                 background: rgba($color: $color-accent, $alpha: 0.2);
+                -webkit-backdrop-filter: blur(4px);
+                backdrop-filter: blur(4px);
                 transition: 1s ease-in-out;
                 text-align: center;
                 text-transform: uppercase;
@@ -657,6 +660,302 @@ button {
           opacity: 1;
         }
       }
+    }
+  }
+}
+
+.gallery-section {
+  background-color: #0c0c0c;
+  color: white;
+  .gallery-section__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "btn btn btn btn"
+      "headline . . ."
+      ". . . .";
+    position: relative;
+    padding: 0px 40px 150px 40px;
+    .gallery-section__content__more-btn {
+      grid-area: btn;
+      justify-self: end;
+      max-width: 200px;
+      margin: 0px 0px 50px 0px;
+    }
+    .gallery-section__content__headline {
+      grid-area: headline;
+      font-size: $headline-size;
+      line-height: 1;
+      align-self: start;
+      height: 40px;
+      margin: 0px 0px 30px 0px;
+      letter-spacing: 4px;
+      &:before {
+        content: "gallery";
+        display: block;
+        position: absolute;
+        top: -140px;
+        left: 35%;
+        background: linear-gradient(90deg, #0c0c0c, #242424);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: #242424;
+        font-size: 210px;
+        font-weight: 600;
+        z-index: 1;
+      }
+    }
+    .gallery-section__content__item {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 350px;
+      position: relative;
+      z-index: 2;
+
+      &:hover {
+        &:before {
+          content: " ";
+          display: block;
+          position: absolute;
+          background-image: url("../img/plus.svg");
+          background-position: center;
+          background-size: 10%;
+          background-repeat: no-repeat;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+          background-color: rgba($color: $color-accent, $alpha: 0.3);
+        }
+      }
+    }
+    #photo-1 {
+      background-image: url("../img/photo-1.jpg");
+    }
+    #photo-2 {
+      background-image: url("../img/photo-2.jpg");
+    }
+    #photo-3 {
+      background-image: url("../img/photo-3.jpg");
+    }
+    #photo-4 {
+      background-image: url("../img/photo-4.jpg");
+    }
+    #photo-5 {
+      background-image: url("../img/photo-5.jpg");
+    }
+    #photo-6 {
+      background-image: url("../img/photo-6.jpg");
+    }
+  }
+}
+
+.contacts-section {
+  background-color: #0c0c0c;
+  color: white;
+  position: relative;
+  background-image: url("../img/contacts-bg.jpg");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .contacts-section__content {
+    display: grid;
+    padding: 0px 40px 300px 40px;
+
+    .contacts-section__content__headline {
+      justify-self: center;
+      font-size: $headline-size;
+      line-height: 1;
+      align-self: start;
+      height: 40px;
+      margin: 0px 0px 150px 0px;
+      letter-spacing: 4px;
+      position: relative;
+      z-index: 2;
+    }
+  }
+  .contacts-section__content__form {
+    .form__block {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto auto auto;
+      gap: 1px 1px;
+      grid-template-areas:
+        "contacts . . textarea"
+        "contacts . . textarea"
+        "btn btn btn btn";
+      grid-area: form;
+      align-items: center;
+      .form__block__contacts {
+        grid-area: contacts;
+        .form__block__contacts__item {
+          font-family: "Poppins", sans-serif;
+          font-weight: 200;
+          font-size: $paragraph-size;
+          line-height: 22px;
+          color: rgba($color: white, $alpha: 0.6);
+          margin: 10px 0px;
+          i {
+            font-size: 18px;
+            margin: 0px 10px 0px 0px;
+            color: rgba($color: white, $alpha: 0.3);
+          }
+        }
+        .phone {
+          font-size: 36px;
+          margin: 0;
+          line-height: 1;
+          align-self: start;
+          height: 40px;
+          letter-spacing: 4px;
+          font-family: "Teko", sans-serif;
+          color: rgba($color: white, $alpha: 1);
+        }
+        :last-child {
+          margin: 10px 0px 0px 0px;
+        }
+      }
+      input {
+        border: 0;
+        outline: 0;
+        padding: 0px 20px;
+        font-family: "Poppins", sans-serif;
+        background-color: rgba($color: white, $alpha: 0.1);
+        color: white;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        align-self: stretch;
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+      }
+
+      textarea {
+        grid-area: textarea;
+        border: 0;
+        outline: 0;
+        resize: none;
+        font-family: "Poppins", sans-serif;
+        background-color: rgba($color: white, $alpha: 0.1);
+        color: white;
+        padding: 15px 20px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        align-self: stretch;
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+      }
+
+      input:focus,
+      textarea:focus {
+        background-color: rgba($color: $color-accent, $alpha: 0.4);
+        &::placeholder {
+          color: white;
+        }
+      }
+
+      .form__block__button-wrapper {
+        position: relative;
+        width: 180px;
+        height: 50px;
+        grid-area: btn;
+        justify-self: end;
+        margin: 50px 0px 0px 0px;
+
+        .form-btn {
+          max-width: 180px;
+          width: 180px;
+          height: 50px;
+          background: rgba($color: $color-accent, $alpha: 0.2);
+          -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+          transition: 1s ease-in-out;
+          text-align: center;
+          text-transform: uppercase;
+          svg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            fill: none;
+            stroke: white;
+            stroke-dasharray: 150 480;
+            stroke-dashoffset: 150;
+            transition: 1s ease-in-out;
+          }
+        }
+
+        .form-btn:hover {
+          transition: 1s ease-in-out;
+          background: rgba($color: $color-accent, $alpha: 1);
+        }
+
+        .form-btn:hover svg {
+          stroke-dashoffset: -480;
+        }
+      }
+    }
+  }
+  &:before {
+    content: "contacts";
+    display: block;
+    position: absolute;
+    top: -130px;
+    left: 5%;
+    background: linear-gradient(90deg, #0c0c0c, #242424);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #242424;
+    font-size: 210px;
+    font-weight: 600;
+    z-index: 1;
+  }
+}
+
+.footer-section {
+  color: rgba($color: white, $alpha: 0.6);
+  position: absolute;
+  bottom: 50px;
+  .footer-section__content {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "logo"
+      "author";
+    .footer-section__content__logo {
+      font-size: 36px;
+      text-decoration: none;
+      color: white;
+      align-self: center;
+      grid-area: top-logo;
+      font-weight: 300;
+      width: 180px;
+      grid-area: logo;
+
+      span {
+        color: $color-accent;
+        font-weight: 500;
+      }
+    }
+
+    .footer-section__content__author {
+      grid-area: author;
+      font-family: "Poppins", sans-serif;
+      font-size: 14px;
+      font-weight: 200;
     }
   }
 }
