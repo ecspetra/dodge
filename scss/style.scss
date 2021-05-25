@@ -363,33 +363,6 @@ button {
   }
 }
 
-@media (max-width: 768px) {
-  .hero-section {
-    .hero-section__content {
-      display: grid;
-
-      grid-template-columns: 1fr;
-      grid-template-rows: auto 0.6fr;
-      gap: 0px 0px;
-      grid-template-areas:
-        "."
-        ".";
-      justify-content: center;
-      align-content: center;
-      .hero-section__content__headline {
-        #dodge {
-        }
-        #challenger {
-        }
-      }
-      .hero-section__content__paragraph {
-        &:before {
-        }
-      }
-    }
-  }
-}
-
 .slider-section {
   color: white;
   position: relative;
@@ -1039,6 +1012,8 @@ button {
         grid-template-areas: "nav-list search";
         z-index: 3;
         border-bottom: 1px solid rgba($color: $color-accent, $alpha: 0.3);
+        position: relative;
+        width: 100%;
 
         ul {
           display: grid;
@@ -1054,7 +1029,6 @@ button {
           margin: 0;
           li {
             height: 80px;
-
             display: flex;
             align-items: center;
             position: relative;
@@ -1091,15 +1065,266 @@ button {
             grid-area: nav-item4;
           }
         }
+
+        .header__content__navigation__search {
+          display: grid;
+          align-items: center;
+          justify-content: center;
+          justify-self: end;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          height: 100%;
+          color: white;
+        }
+
+        .header__content__navigation__search:hover > .search-input {
+          width: 100%;
+          padding: 0px 20px;
+        }
+
+        .header__content__navigation__search:hover > .search-btn {
+          svg * {
+            fill: white;
+          }
+
+          &:before {
+            content: " ";
+            background-color: white;
+            width: 1px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+          }
+        }
+
+        .search-btn {
+          color: white;
+          background-color: rgba($color: $color-accent, $alpha: 0.3);
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          width: 60px;
+          display: grid;
+          align-items: center;
+          justify-content: center;
+          svg {
+            width: 20px;
+            height: auto;
+          }
+        }
+
+        .search-input {
+          border: none;
+          background-color: rgba($color: $color-accent, $alpha: 1);
+          outline: none;
+          padding: 0px;
+          color: white;
+          font-size: 16px;
+          -webkit-transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          -ms-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+          width: 0px;
+          height: 100%;
+          box-sizing: border-box;
+
+          &::placeholder {
+            color: white;
+          }
+        }
       }
-      .header__content__navigation__search {
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .content {
+    max-width: 1280px;
+    padding: 0px 40px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  .hero-section {
+    height: 100vh;
+
+    .hero-section__content {
+      margin: 0px auto 200px auto;
+      .hero-section__content__headline {
+        font-size: 100px;
+        line-height: 100px;
+        order: 1;
+        #dodge {
+          font-size: 160px;
+          margin: 0px 0px 0px -10px;
+        }
+        #challenger {
+          margin: 0px 0px 0px 60px;
+        }
+      }
+      .hero-section__content__specs {
+        .hero-section__content__specs__num {
+        }
+        .hero-section__content__specs__headline {
+        }
+        .hero-section__content__specs__block {
+          .hero-section__content__specs__block__item {
+          }
+          .accent {
+          }
+        }
+      }
+    }
+
+    .hero-section__content__blured-block {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      background-color: rgba($color: white, $alpha: 0.03);
+      .hero-section__content__blured-block__content {
+        padding: 0px 40px;
+        box-sizing: border-box;
+        max-width: 1440px;
+        height: 300px;
         display: grid;
-        justify-content: end;
-        align-content: center;
-        svg {
-          width: 20px;
-          height: auto;
-          cursor: pointer;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas: ". .";
+        justify-content: center;
+        align-items: center;
+
+        .hero-section__content__blured-block__content__events {
+          padding: 40px 0px;
+          box-sizing: border-box;
+          height: 300px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          gap: 0px 40px;
+          align-self: center;
+          grid-template-areas:
+            "headline headline"
+            "item1 item2";
+          .events__headline {
+            grid-area: headline;
+            font-size: $headline-size;
+            line-height: 1;
+            align-self: start;
+            height: 40px;
+            margin: 0px 0px 30px 0px;
+            letter-spacing: 4px;
+          }
+          .events__item {
+            align-self: start;
+            font-family: "Poppins", sans-serif;
+            font-weight: 200;
+            font-size: $paragraph-size;
+            line-height: 22px;
+            color: rgba($color: white, $alpha: 0.6);
+            height: 60px;
+
+            span {
+              font-weight: 500;
+              color: rgba($color: white, $alpha: 1);
+            }
+          }
+          .events__btn {
+            color: $color-accent;
+            font-size: 24px;
+            line-height: 22px;
+            align-self: end;
+            margin: 40px 0px 0px 0px;
+            letter-spacing: 4px;
+          }
+        }
+        .hero-section__content__blured-block__content__news {
+          height: 300px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr;
+          grid-template-areas: "image .";
+          align-self: center;
+          gap: 0px 40px;
+          .news__img {
+            grid-area: image;
+            background-image: url("../img/hero-bg-2.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 300px;
+            height: 300px;
+          }
+          .news__description {
+            padding: 40px 0px;
+            box-sizing: border-box;
+            display: grid;
+            height: 300px;
+            align-self: center;
+            .news__description__headline {
+              font-size: $headline-size;
+              line-height: 1;
+              align-self: start;
+              height: 40px;
+              margin: 0px 0px 30px 0px;
+              letter-spacing: 4px;
+            }
+            .news__description__paragraph {
+              align-self: start;
+              font-family: "Poppins", sans-serif;
+              font-weight: 200;
+              font-size: $paragraph-size;
+              line-height: 22px;
+              color: rgba($color: white, $alpha: 0.6);
+              height: 60px;
+            }
+            .news__description__btn {
+              color: $color-accent;
+              font-size: 24px;
+              line-height: 22px;
+              align-self: end;
+              margin: 40px 0px 0px 0px;
+              letter-spacing: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    .hero-section__content {
+      display: grid;
+
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 0.6fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "."
+        ".";
+      justify-content: center;
+      align-content: center;
+      .hero-section__content__headline {
+        #dodge {
+        }
+        #challenger {
+        }
+      }
+      .hero-section__content__paragraph {
+        &:before {
         }
       }
     }
