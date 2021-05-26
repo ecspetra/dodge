@@ -3336,6 +3336,63 @@ button {
 }
 
 @media (max-width: 440px) {
+  .gallery-section {
+    .gallery-section__content {
+      padding: 0px 20px !important;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 1fr 1fr 1fr auto;
+      gap: 0px 0px;
+      grid-template-areas:
+        "headline headline"
+        ". ."
+        ". ."
+        ". ."
+        "btn btn";
+      position: relative;
+      padding: 0px 20px 70px 20px !important;
+      .gallery-section__content__more-btn {
+        grid-area: btn;
+        justify-self: center;
+        max-width: 200px;
+        margin: 50px 0px 0px 0px;
+        font-size: 20px;
+      }
+      .gallery-section__content__headline {
+        grid-area: headline;
+        font-size: $headline-1280-size;
+        align-self: start;
+        justify-self: center;
+        text-align: center;
+        height: 40px;
+        margin: 0px 0px 40px 0px;
+        max-width: 300px;
+        &:before {
+          display: none;
+        }
+      }
+      .gallery-section__content__item {
+        height: 150px;
+
+        &:hover {
+          &:before {
+          }
+        }
+      }
+      #photo-1 {
+      }
+      #photo-2 {
+      }
+      #photo-3 {
+      }
+      #photo-4 {
+      }
+      #photo-5 {
+      }
+      #photo-6 {
+      }
+    }
+  }
   .contacts-section {
     .contacts-section__content {
       display: grid;
