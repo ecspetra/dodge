@@ -6,6 +6,11 @@ body {
   font-family: "Teko", sans-serif;
 }
 
+html.lock,
+body.lock {
+  overflow: hidden;
+}
+
 button {
   border: 0;
   outline: 0;
@@ -917,7 +922,7 @@ button:hover {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: black;
+  background-color: white;
   z-index: 3;
 }
 .header-container .header {
@@ -2543,7 +2548,6 @@ button:hover {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: black;
   }
   .header-container .header {
     max-width: 768px;
@@ -2563,13 +2567,14 @@ button:hover {
     position: relative;
   }
   .header-container .header .header__content .header__content__logo {
-    font-size: 22px;
+    font-size: 30px;
     grid-area: top-logo;
     width: auto;
   }
   .header-container .header .header__content .header__content__burger {
     display: grid;
     justify-self: end;
+    align-self: center;
     position: relative;
     width: 30px;
     height: 25px;
@@ -2602,7 +2607,7 @@ button:hover {
   .header-container .header .header__content .header__content__burger.active-burger {
     position: fixed;
     top: 16px;
-    right: 20px;
+    right: 10px;
     z-index: 50;
   }
   .header-container .header .header__content .header__content__burger.active-burger span {
@@ -2619,54 +2624,85 @@ button:hover {
   .header-container .header .header__content .header__content__navigation {
     position: fixed;
     top: -100%;
-    left: 0;
+    left: -100%;
     width: 100%;
-    height: 100%;
-    background-color: black;
+    border-bottom: none;
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-    gap: 0px 0px;
+    gap: 20px 0px;
     grid-template-areas: "search" "nav-list";
-    justify-content: start;
-    align-content: center;
     justify-items: start;
+    align-items: start;
+    background-color: #0c0c0c;
   }
   .header-container .header .header__content .header__content__navigation ul {
-    padding: 20px 20px;
+    padding: 0px 20px;
     display: grid;
     grid-area: nav-list;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 60px 60px 60px;
     gap: 0px 0px;
     grid-template-areas: "nav-item1" "nav-item2" "nav-item3" "nav-item4";
-    justify-content: start;
-    align-content: center;
-    justify-items: start;
-    gap: 0px 0px;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    align-content: start;
+    background-color: #0c0c0c;
+    height: 100vh;
   }
   .header-container .header .header__content .header__content__navigation ul li {
     height: 60px;
-    align-items: center;
   }
   .header-container .header .header__content .header__content__navigation ul li .navigation__item {
     width: 100%;
-    height: 60px;
+  }
+  .header-container .header .header__content .header__content__navigation ul :nth-child(1) {
+    grid-area: nav-item1;
+  }
+  .header-container .header .header__content .header__content__navigation ul :nth-child(2) {
+    grid-area: nav-item2;
+  }
+  .header-container .header .header__content .header__content__navigation ul :nth-child(3) {
+    grid-area: nav-item3;
+  }
+  .header-container .header .header__content .header__content__navigation ul :nth-child(4) {
+    grid-area: nav-item4;
   }
   .header-container .header .header__content .header__content__navigation .header__content__navigation__search {
     display: grid;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    justify-self: start;
+    position: static;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr;
+    gap: 20px 0px;
+    grid-template-areas: "input btn";
     grid-area: search;
   }
   .header-container .header .header__content .header__content__navigation .header__content__navigation__search:hover > .search-input {
-    width: 100%;
+    width: 190px;
     padding: 0px 20px;
   }
-  .header-container .header .header__content .header__content__navigation .header__content__navigation__search:hover > .search-btn svg * {
+  .header-container .header .header__content .header__content__navigation .search-btn {
+    color: white;
+    background-color: #cab039;
+    position: relative;
+    width: 40px;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    justify-self: start;
+    grid-area: btn;
+  }
+  .header-container .header .header__content .header__content__navigation .search-btn svg * {
+    width: 20px;
+    height: auto;
     fill: white;
   }
-  .header-container .header .header__content .header__content__navigation .header__content__navigation__search:hover > .search-btn:before {
+  .header-container .header .header__content .header__content__navigation .search-btn:before {
     content: " ";
     background-color: white;
     width: 1px;
@@ -2676,40 +2712,13 @@ button:hover {
     top: 0;
     display: block;
   }
-  .header-container .header .header__content .header__content__navigation .search-btn {
-    color: white;
-    background-color: rgba(202, 176, 57, 0.3);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 60px;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-  }
-  .header-container .header .header__content .header__content__navigation .search-btn svg {
-    width: 20px;
-    height: auto;
-  }
   .header-container .header .header__content .header__content__navigation .search-input {
-    border: none;
     background-color: #cab039;
-    outline: none;
-    padding: 0px;
-    color: white;
-    font-size: 16px;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    width: 0px;
-    height: 100%;
+    padding: 0px 20px;
+    width: 190px;
+    height: 60px;
     box-sizing: border-box;
-  }
-  .header-container .header .header__content .header__content__navigation .search-input::placeholder {
-    color: white;
+    grid-area: input;
   }
   .header-container .header .header__content .header__content__navigation.active-burger {
     top: 0;
