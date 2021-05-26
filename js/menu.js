@@ -7,14 +7,6 @@ $(window).scroll(function () {
     $(".header-container").removeClass("lightHeader");
   }
 });
-// $(document).ready(function () {
-//   $(".header__content__navigation a").click(function (event) {
-//     $(".header__content__burger, .header__content__navigation").toggleClass(
-//       "active-burger"
-//     );
-//     $("body").toggleClass("lock");
-//   });
-// });
 
 $(document).ready(function () {
   if (window.innerWidth < 768) {
