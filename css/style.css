@@ -3180,7 +3180,7 @@ button:hover {
     width: 100%;
   }
   .header-container .header {
-    max-width: 320px;
+    max-width: 320px !important;
     margin: 0 auto;
     padding: 0px 20px !important;
     box-sizing: border-box;
