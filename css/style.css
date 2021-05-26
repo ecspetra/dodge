@@ -2245,7 +2245,7 @@ button:hover {
   }
 
   .about-section {
-    padding: 80px 40px 50px 40px;
+    padding: 80px 20px 50px 20px;
     position: relative;
     margin: 430px 0px 0px 0px;
   }
@@ -2324,7 +2324,7 @@ button:hover {
   }
   .slider-section .slider-section__content .slide__wrapper .slide__wrapper__container {
     max-width: 768px;
-    padding: 60px 40px 0px 40px;
+    padding: 60px 20px 0px 20px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
@@ -2435,7 +2435,7 @@ button:hover {
     gap: 0px 0px;
     grid-template-areas: "btn btn btn btn" "headline . . ." ". . . .";
     position: relative;
-    padding: 0px 40px 80px 40px;
+    padding: 0px 20px 80px 20px;
   }
   .gallery-section .gallery-section__content .gallery-section__content__more-btn {
     grid-area: btn;
@@ -2459,7 +2459,8 @@ button:hover {
   }
   .contacts-section .contacts-section__content {
     display: grid;
-    padding: 0px 40px 190px 40px;
+    padding: 0px 20px 190px 20px;
+    box-sizing: border-box;
   }
   .contacts-section .contacts-section__content .contacts-section__content__headline {
     font-size: 36px;
