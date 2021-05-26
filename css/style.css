@@ -2504,6 +2504,7 @@ button:hover {
   }
   .contacts-section .contacts-section__content__form .form__block textarea {
     padding: 15px 20px;
+    resize: horizontal;
   }
   .contacts-section .contacts-section__content__form .form__block .form__block__button-wrapper {
     width: 180px;
