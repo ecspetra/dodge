@@ -3119,7 +3119,7 @@ button {
 
       .header__content {
         display: grid;
-        grid-template-columns: 1.8fr 0.2fr;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         gap: 0px 0px;
         grid-template-areas: "top-logo navigation";
@@ -3132,6 +3132,7 @@ button {
           font-size: 30px;
           grid-area: top-logo;
           width: auto;
+          justify-self: start;
 
           span {
           }
@@ -3901,7 +3902,7 @@ button {
       width: 100%;
     }
     .header {
-      max-width: 320px !important;
+      max-width: 320px;
       margin: 0 auto;
       padding: 0px 20px !important;
       box-sizing: border-box;
