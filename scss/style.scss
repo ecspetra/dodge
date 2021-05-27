@@ -3336,6 +3336,85 @@ button {
 }
 
 @media (max-width: 440px) {
+  .about-section {
+    padding: 80px 20px 60px 20px;
+    position: relative;
+    margin: 430px 0px 0px 0px;
+    .about-section__content {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto;
+      gap: 80px 0px;
+      grid-template-areas:
+        "headline"
+        "image"
+        "specializations"
+        "text-block";
+      .about-section__content__headline {
+        padding: 0px 0px 20px 0px;
+        grid-area: headline;
+        font-size: $headline-1280-size;
+        align-self: start;
+        height: 40px;
+        margin: 0px 0px -20px 0px;
+        justify-self: center;
+      }
+      .about-section__content__img {
+        grid-area: image;
+        width: 280px;
+        height: 200px;
+        align-self: center;
+        justify-self: center;
+      }
+      .about-section__content__specializations {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+          "."
+          "."
+          ".";
+        grid-area: specializations;
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+        height: 400px;
+        .about-section__content__specializations__headline {
+          font-size: $headline-1280-size;
+          line-height: 40px;
+        }
+        .about-section__content__specializations__item {
+          justify-self: center;
+          .about-section__content__specializations__item__icon {
+            svg {
+              width: 50px;
+              height: auto;
+            }
+          }
+          .about-section__content__specializations__item__text {
+          }
+        }
+      }
+      .about-section__content__text-block {
+        grid-area: text-block;
+        align-self: center;
+        height: auto;
+        .about-section__content__text-block__headline {
+          font-size: $headline-1280-size;
+        }
+        .about-section__content__text-block__paragraph {
+          margin: 40px 0px 0px 0px;
+
+          span {
+          }
+        }
+      }
+    }
+    &:before {
+      display: none;
+    }
+  }
   .gallery-section {
     .gallery-section__content {
       padding: 0px 20px !important;
