@@ -780,7 +780,8 @@ button:hover {
   align-self: stretch;
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
-  width: 100% !important;
+  width: 100%;
+  box-sizing: border-box;
 }
 .contacts-section .contacts-section__content__form .form__block input::placeholder {
   font-size: 14px;
@@ -806,7 +807,8 @@ button:hover {
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   margin: 0;
-  width: 100% !important;
+  width: 100%;
+  box-sizing: border-box;
 }
 .contacts-section .contacts-section__content__form .form__block textarea::placeholder {
   font-size: 14px;
