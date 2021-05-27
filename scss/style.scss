@@ -1754,7 +1754,7 @@ button {
               display: grid;
 
               .navigation__item {
-                font-size: $paragraph-size;
+                font-size: 20px;
               }
 
               &:hover a {
@@ -2367,7 +2367,7 @@ button {
               display: grid;
 
               .navigation__item {
-                font-size: $paragraph-size;
+                font-size: 20px;
               }
 
               &:hover a {
@@ -3135,6 +3135,7 @@ button {
 
               .navigation__item {
                 width: 100%;
+                font-size: 20px;
               }
               &:hover {
               }
@@ -4319,6 +4320,7 @@ button {
 
               .navigation__item {
                 width: 100%;
+                font-size: 20px;
               }
               &:hover {
               }

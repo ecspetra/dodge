@@ -1541,7 +1541,7 @@ button:hover {
     display: grid;
   }
   .header-container .header .header__content .header__content__navigation ul li .navigation__item {
-    font-size: 14px;
+    font-size: 20px;
   }
   .header-container .header .header__content .header__content__navigation ul :nth-child(1) {
     grid-area: nav-item1;
@@ -2025,7 +2025,7 @@ button:hover {
     display: grid;
   }
   .header-container .header .header__content .header__content__navigation ul li .navigation__item {
-    font-size: 14px;
+    font-size: 20px;
   }
   .header-container .header .header__content .header__content__navigation ul :nth-child(1) {
     grid-area: nav-item1;
@@ -2644,6 +2644,7 @@ button:hover {
   }
   .header-container .header .header__content .header__content__navigation ul li .navigation__item {
     width: 100%;
+    font-size: 20px;
   }
   .header-container .header .header__content .header__content__navigation ul :nth-child(1) {
     grid-area: nav-item1;
@@ -3587,6 +3588,7 @@ button:hover {
   }
   .header-container .header .header__content .header__content__navigation ul li .navigation__item {
     width: 100%;
+    font-size: 20px;
   }
   .header-container .header .header__content .header__content__navigation ul :nth-child(1) {
     grid-area: nav-item1;
