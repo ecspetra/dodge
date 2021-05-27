@@ -1,0 +1,37 @@
+@media (max-width: 1340px) {
+  .about-section .about-section__content {
+    grid-template-columns: auto 0.5fr 1.5fr;
+    gap: 0px 60px;
+  }
+  .about-section .about-section__content .about-section__content__img {
+    width: 440px;
+    height: 440px;
+  }
+  .slider-section .slider-section__headline {
+    top: 0px;
+    left: 20%;
+  }
+
+  .prev {
+    background-size: 70%;
+    width: 32px;
+    height: 32px;
+    top: 353px !important;
+    left: 40px !important;
+  }
+
+  .next {
+    background-size: 70%;
+    width: 32px;
+    height: 32px;
+    top: 353px !important;
+    left: 80px !important;
+  }
+
+  .slick-dots {
+    top: 120px;
+    right: 40px !important;
+  }
+}
+
+/*# sourceMappingURL=style-1340px.css.map */

@@ -1,0 +1,60 @@
+@media (max-width: 1340px) {
+  .about-section {
+    .about-section__content {
+      grid-template-columns: auto 0.5fr 1.5fr;
+      gap: 0px 60px;
+      .about-section__content__headline {
+      }
+      .about-section__content__img {
+        width: 440px;
+        height: 440px;
+      }
+      .about-section__content__specializations {
+        .about-section__content__specializations__headline {
+        }
+        .about-section__content__specializations__item {
+          .about-section__content__specializations__item__icon {
+            svg {
+            }
+          }
+          .about-section__content__specializations__item__text {
+          }
+        }
+      }
+      .about-section__content__text-block {
+        .about-section__content__text-block__headline {
+        }
+        .about-section__content__text-block__paragraph {
+          span {
+          }
+        }
+      }
+    }
+    &:before {
+    }
+  }
+  .slider-section {
+    .slider-section__headline {
+      top: 0px;
+      left: 20%;
+    }
+  }
+  .prev {
+    background-size: 70%;
+    width: 32px;
+    height: 32px;
+    top: 353px !important;
+    left: 40px !important;
+  }
+  .next {
+    background-size: 70%;
+    width: 32px;
+    height: 32px;
+    top: 353px !important;
+    left: 80px !important;
+  }
+  .slick-dots {
+    top: 120px;
+    right: 40px !important;
+  }
+}
