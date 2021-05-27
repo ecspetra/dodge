@@ -830,6 +830,7 @@ button {
         align-self: stretch;
         -webkit-backdrop-filter: blur(4px);
         backdrop-filter: blur(4px);
+        width: 100% !important;
         &::placeholder {
           font-size: 14px;
           font-weight: 300;
@@ -856,7 +857,7 @@ button {
         -webkit-backdrop-filter: blur(4px);
         backdrop-filter: blur(4px);
         margin: 0;
-
+        width: 100% !important;
         &::placeholder {
           font-size: 14px;
           font-weight: 300;
