@@ -769,6 +769,8 @@ button:hover {
   outline: 0;
   padding: 0px 20px;
   font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
   background-color: rgba(255, 255, 255, 0.1);
   color: white;
   -webkit-transition: all 0.3s ease-in-out;
@@ -780,12 +782,18 @@ button:hover {
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
+.contacts-section .contacts-section__content__form .form__block input::placeholder {
+  font-size: 14px;
+  font-weight: 300;
+}
 .contacts-section .contacts-section__content__form .form__block textarea {
   grid-area: textarea;
   border: 0;
   outline: 0;
   resize: none;
   font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
   background-color: rgba(255, 255, 255, 0.1);
   color: white;
   padding: 15px 20px;
@@ -797,6 +805,10 @@ button:hover {
   align-self: stretch;
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
+}
+.contacts-section .contacts-section__content__form .form__block textarea::placeholder {
+  font-size: 14px;
+  font-weight: 300;
 }
 .contacts-section .contacts-section__content__form .form__block input:focus,
 .contacts-section .contacts-section__content__form .form__block textarea:focus {
