@@ -727,11 +727,10 @@ button:hover {
 }
 .contacts-section .contacts-section__content__form .form__block {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: auto auto auto auto;
   grid-template-rows: auto auto auto;
   gap: 1px 1px;
   grid-template-areas: "contacts . . textarea" "contacts . . textarea" "btn btn btn btn";
-  grid-area: form;
   align-items: center;
 }
 .contacts-section .contacts-section__content__form .form__block .form__block__contacts {
@@ -805,6 +804,7 @@ button:hover {
   align-self: stretch;
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
+  margin: 0;
 }
 .contacts-section .contacts-section__content__form .form__block textarea::placeholder {
   font-size: 14px;
@@ -2714,6 +2714,147 @@ button:hover {
   }
 }
 @media (max-width: 440px) {
+  .content {
+    max-width: 440;
+    padding: 0px 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .hero-section {
+    height: 540px;
+    background-attachment: scroll;
+  }
+  .hero-section .hero-section__content {
+    transform: translateY(60px);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 0.6fr;
+    gap: 40px 0px;
+    grid-template-areas: "." ".";
+    justify-content: center;
+    align-content: center;
+  }
+  .hero-section .hero-section__content .hero-section__content__headline {
+    font-size: 60px;
+    line-height: 60px;
+    order: 1;
+    text-align: center;
+    justify-self: center;
+  }
+  .hero-section .hero-section__content .hero-section__content__headline #dodge {
+    font-size: 100px;
+    margin: 0px 0px 0px 0px;
+  }
+  .hero-section .hero-section__content .hero-section__content__headline #challenger {
+    margin: 0px 0px 0px 0px;
+  }
+  .hero-section .hero-section__content .hero-section__content__specs {
+    order: 2;
+    justify-self: center;
+  }
+  .hero-section .hero-section__content .hero-section__content__specs .hero-section__content__specs__headline {
+    font-size: 36px;
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+    max-width: 400px;
+    padding: 0px 0px 10px 0px;
+  }
+  .hero-section .hero-section__content .hero-section__content__specs .hero-section__content__specs__block {
+    grid-template-columns: 0.7fr 1.3fr;
+    grid-template-rows: auto auto auto;
+  }
+  .hero-section .hero-section__content__blured-block {
+    position: static;
+    height: 430px;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background-color: #0c0c0c;
+  }
+  .hero-section .hero-section__content__blured-block .hero-section__content__blured-block__content {
+    padding: 40px 20px;
+    max-width: 768px;
+    height: auto;
+    gap: 0px 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 40px 0px;
+    grid-template-areas: "." ".";
+    justify-content: center;
+    align-content: center;
+  }
+  .hero-section .hero-section__content__blured-block .hero-section__content__blured-block__content .hero-section__content__blured-block__content__events {
+    padding: 0px 0px;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "headline" "item" "btn";
+    justify-content: center;
+    text-align: center;
+  }
+  .hero-section .hero-section__content__blured-block .hero-section__content__blured-block__content .hero-section__content__blured-block__content__events .events__headline {
+    font-size: 36px;
+    height: 20px;
+    grid-area: headline;
+    justify-self: center;
+  }
+  .hero-section .hero-section__content__blured-block .hero-section__content__blured-block__content .hero-section__content__blured-block__content__events .events__item {
+    height: 40px;
+    grid-area: item;
+    justify-self: center;
+  }
+  .hero-section .hero-section__content__blured-block .hero-section__content__blured-block__content .hero-section__content__blured-block__content__events .events__item:nth-child(2) {
+    display: none;
+  }
+  .hero-section .hero-section__content__blured-block .hero-section__content__blured-block__content .hero-section__content__blured-block__content__events .events__btn {
+    font-size: 20px;
+    margin: 20px 0px 0px 0px;
+    grid-area: btn;
+    justify-self: center;
+  }
+  .hero-section .hero-section__content__blured-block .hero-section__content__blured-block__content .hero-section__content__blured-block__content__news {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: ".";
+    justify-content: center;
+    text-align: center;
+  }
+  .hero-section .hero-section__content__blured-block .hero-section__content__blured-block__content .hero-section__content__blured-block__content__news .news__img {
+    display: none;
+  }
+  .hero-section .hero-section__content__blured-block .hero-section__content__blured-block__content .hero-section__content__blured-block__content__news .news__description {
+    padding: 0px 0px;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "headline" "item" "btn";
+    justify-content: center;
+    text-align: center;
+  }
+  .hero-section .hero-section__content__blured-block .hero-section__content__blured-block__content .hero-section__content__blured-block__content__news .news__description .news__description__headline {
+    font-size: 36px;
+    height: 20px;
+    grid-area: headline;
+    justify-self: center;
+  }
+  .hero-section .hero-section__content__blured-block .hero-section__content__blured-block__content .hero-section__content__blured-block__content__news .news__description .news__description__paragraph {
+    height: 40px;
+    grid-area: item;
+    overflow: visible;
+    display: block;
+    justify-self: center;
+  }
+  .hero-section .hero-section__content__blured-block .hero-section__content__blured-block__content .hero-section__content__blured-block__content__news .news__description .news__description__btn {
+    font-size: 20px;
+    margin: 30px 0px 0px 0px;
+    grid-area: btn;
+    justify-self: center;
+  }
+
   .about-section {
     padding: 80px 20px 60px 20px;
     position: relative;
